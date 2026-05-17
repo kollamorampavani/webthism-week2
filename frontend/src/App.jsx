@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Plus, Trash2, Edit2, X, CheckCircle, AlertCircle } from 'lucide-react';
 import './index.css';
 
-const API_URL = 'http://localhost:5000/api/todos';
+const API_URL = import.meta.env.PROD ? '/api/todos' : 'http://localhost:5000/api/todos';
 
 function App() {
   const [todos, setTodos] = useState([]);
